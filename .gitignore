@@ -3,7 +3,7 @@
 
 # Editor files
 /.idea/
-/.brackets.json
+.idea
 
 # Cordova folders
 node_modules/
