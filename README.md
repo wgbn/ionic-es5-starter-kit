@@ -31,7 +31,8 @@ Para executar o aplicativo em seu dispositivo Android:
 O projeto está organizado de forma que você não precisa importar seus scripts (os seus) para o index.html
 Você somente precisa por no index as bibliotecas externas que você for adicionando ao projeto.
 
-Todos os seus scripts, criado destro da pasta `app/` serão unidos e minificados dentro do arquivo `app/js/scripts.min.js'
+Todos os seus scripts, criados dentro da pasta `app/` serão unidos e minificados dentro do arquivo `app/js/scripts.min.js'
+Para isso, antes de escrever seus arquivos rode o `$ gulp` para ficar assistindo as motificações nos seus arquivos e ir concatenando à medida que você vai desenvolvendo.
 
 A recomendação do Style Guide do John Papa é que você separe os arquivos por área (telas), como já demonstram as duas telas do projeto base (login e main):
 
