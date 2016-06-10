@@ -14,7 +14,7 @@ Esta aplicação (principalmente) segue o [Guia de Estilo sugerido por John Papa
 ## Começando
 
 - instale nodejs, npm, gulp, bower, cordova, ionic & sass (como global -g se ja nao os tiver instalado)
-- `git clone git@github.com:loicknuchel/ionic-starter.git`: clone este repositorio
+- `git clone git@github.com:wgbn/ionic-es5-starter-kit.git`: clone este repositorio
 - `cd wgbn-ionic-starter`: entre na pasta
 - `bower install`: instale as dependencias do app
 - `npm install`: instale as dependencias de construçao
