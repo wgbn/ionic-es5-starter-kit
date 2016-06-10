@@ -26,6 +26,28 @@ Para executar o aplicativo em seu dispositivo Android:
 - `ionic resources`: gere automaticamente as imagens de launcher e splash screen
 - `ionic run android`: e rode o aplicativo
 
+## Organização:
+
+O projeto está organizado de forma que você não precisa importar seus scripts (os seus) para o index.html
+Você somente precisa por no index as bibliotecas externas que você for adicionando ao projeto.
+
+Todos os seus scripts, criado destro da pasta `app/` serão unidos e minificados dentro do arquivo `app/js/scripts.min.js'
+
+A recomendação do Style Guide do John Papa é que você separe os arquivos por área (telas), como já demonstram as duas telas do projeto base (login e main):
+
+```
+app/
+  |- login
+  |   |- login.ctrl.js (controllers usam o sufixo ctrl.js)
+  |   |- login.html (o arquivo de view leva o mesmo nome com .html)
+  |
+  |- main
+  |   |- main.ctrl.js
+  |   |- main.html
+  |   |- main-title.directive.js (directives que só são usadas em uma tela, devem ficar na pasta com sufixo directive.js)
+  |   |- main-title.directive.html (o template da directive deve estar no mesmo local com sufixo directive.html)
+```
+
 ## Personalização
 
 Como é apenas um projeto modelo, você pode querer mudar o seu nome. Para isso, vocẽ terá de editar:
