@@ -1,5 +1,8 @@
 {
-    "name": "ionic-starter",
+    "name": "ionic-es5-starter-kit",
+    "homepage": "https://github.com/wgbn/ionic-es5-starter-kit",
+    "author": "Walter Gandarella <walter.wgbn@gmail.com>",
+    "description": "Um ponto de partida para seu app ionic!",
     "private": "true",
     "devDependencies": {
         "ionic": "driftyco/ionic-bower#1.3.1",

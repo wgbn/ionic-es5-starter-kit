@@ -1,5 +1,5 @@
 {
-  "name": "ionic-starter",
+  "name": "ionic-es5-starter-kit",
   "app_id": "",
   "gulpStartupTasks": [
     "sass",

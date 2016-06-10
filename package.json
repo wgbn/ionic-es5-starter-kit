@@ -1,7 +1,7 @@
 {
-  "name": "ionic-starter",
+  "name": "ionic-es5-starter-kit",
   "version": "0.0.1",
-  "description": "Start a new ionic project in seconds !",
+  "description": "Um ponto de partida para seu app ionic!",
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
