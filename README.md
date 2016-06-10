@@ -35,7 +35,6 @@ Todos os seus scripts, criado destro da pasta `app/` serão unidos e minificados
 
 A recomendação do Style Guide do John Papa é que você separe os arquivos por área (telas), como já demonstram as duas telas do projeto base (login e main):
 
-```
 app/
   |- login
   |   |- login.ctrl.js (controllers usam o sufixo ctrl.js)
@@ -46,7 +45,6 @@ app/
   |   |- main.html
   |   |- main-title.directive.js (directives que só são usadas em uma tela, devem ficar na pasta com sufixo directive.js)
   |   |- main-title.directive.html (o template da directive deve estar no mesmo local com sufixo directive.html)
-```
 
 ## Personalização
 
