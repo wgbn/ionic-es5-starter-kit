@@ -59,14 +59,14 @@ Para scripts que serão acessados por várias telas, como directives globais, fe
 ```
 app/
   |- common
-  |- directives
-  |    |- h3-name.directive.js
-  |    |- h3-name.directive.html
-  |
-  |- services
-  |    |- local-storage.service.js
-  |
-  |- utils.service.js
+       |- directives
+       |   |- h3-name.directive.js
+       |   |- h3-name.directive.html
+       |
+       |- services
+       |   |- local-storage.service.js
+       |
+       |- utils.service.js
 ```
 
 * **services** e **factorys** usam o sufixo `.service.js`
