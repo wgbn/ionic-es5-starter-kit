@@ -86,6 +86,8 @@ Você pode ou não separar em pastas, como `scss/telas/` ou `scss/directives/`, 
 @import "www/lib/ionic/scss/ionic";
 @import '_overrides';
 @import "_styles";
+@import "sua-diretiva";
+@import "sua-tela";
 ```
 
 Se você fez sua hierarquia com pastas, seu arquivo `ionic.app.scss` ficaria parecido com este:
