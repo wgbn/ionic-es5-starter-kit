@@ -28,6 +28,8 @@ Para executar o aplicativo em seu dispositivo Android:
 
 ## Organização:
 
+### JavaScripts
+
 O projeto está organizado de forma que você não precisa importar seus scripts (os seus) para o index.html
 Você somente precisa por no index as bibliotecas externas que você for adicionando ao projeto.
 
@@ -74,6 +76,38 @@ app/
 * o template da directive deve estar no mesmo local com sufixo `.directive.html`
 
 **Lembrando que todos estes scripts serão incluídos automaticamente em seu index.html minificados no arquivo scripts.min.js**
+
+### SASS
+
+Seus arquivos `.scss` devem estar na pasta `scss/` que fica fora da pasta `www/`. Para cada tela e directive que você precisa estilizar, recomenda-se colocar seus arquivos de estilo aqui.
+Você pode ou não separar em pastas, como `scss/telas/` ou `scss/directives/`, o importante é que você importe-os sempre no arquivo `ionic.app.scss` como o exemplo abaixo:
+
+```
+@import "www/lib/ionic/scss/ionic";
+@import '_overrides';
+@import "_styles";
+```
+
+Se você fez sua hierarquia com pastas, seu arquivo `ionic.app.scss` ficaria parecido com este:
+
+```
+@import "www/lib/ionic/scss/ionic";
+@import '_overrides';
+@import "_styles";
+@import "directives/sua-diretiva";
+@import "telas/sua-tela";
+```
+
+Para uma organização de pastas parecida com esta:
+
+```
+|- scss
+|    |- directives
+|    |    |- sua-directiva.scss
+|    |
+|    |- telas
+|    |    |- sua-tela.scss
+```
 
 ## Personalização
 
