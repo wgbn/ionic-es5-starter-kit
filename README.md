@@ -1,7 +1,6 @@
 # Ionic ES5 Starter Kit
 
 [![Dependency Status](https://david-dm.org/loicknuchel/ionic-starter.svg)](https://david-dm.org/loicknuchel/ionic-starter)
-[![devDependency Status](https://david-dm.org/loicknuchel/ionic-starter/dev-status.svg)](https://david-dm.org/loicknuchel/ionic-starter#info=devDependencies)
 
 Este projeto tem como objetivo permitir que você inicie um novo app o mais rápido possível.
 
