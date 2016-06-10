@@ -73,6 +73,8 @@ app/
 * **directives** usam o sufixo `.directive.js`
 * o template da directive deve estar no mesmo local com sufixo `.directive.html`
 
+**Lembrando que todos estes scripts serão incluídos automaticamente em seu index.html minificados no arquivo scripts.min.js**
+
 ## Personalização
 
 Como é apenas um projeto modelo, você pode querer mudar o seu nome. Para isso, vocẽ terá de editar:
