@@ -54,6 +54,25 @@ app/
 * **directives** que só são usadas em uma tela, devem ficar na pasta com sufixo `.directive.js`
 * o template da directive deve estar no mesmo local com sufixo `.directive.html`
 
+Para scripts que serão acessados por várias telas, como directives globais, fectorys e services, recomenda-se usar a pasta `app/common` e você pode ou não separar em subpastas dentro dela:
+
+```
+app/
+  |- common
+  |- directives
+  |    |- h3-name.directive.js
+  |    |- h3-name.directive.html
+  |
+  |- services
+  |    |- local-storage.service.js
+  |
+  |- utils.service.js
+```
+
+* **services** e **factorys** usam o sufixo `.service.js`
+* **directives** usam o sufixo `.directive.js`
+* o template da directive deve estar no mesmo local com sufixo `.directive.html`
+
 ## Personalização
 
 Como é apenas um projeto modelo, você pode querer mudar o seu nome. Para isso, vocẽ terá de editar:
