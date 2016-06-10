@@ -1,5 +1,6 @@
 (function () {
     'use strict';
+    
     angular.module('app', ['ionic'])
         .config(configBlock)
         .run(runBlock);
@@ -11,13 +12,14 @@
             .state('login', {
                 url: '/login',
                 templateUrl: 'app/login/login.html',
-                controller: 'LoginCtrl'
+                controller: 'LoginCtrl',
+                controllerAs: 'vm'
             })
             .state('main', {
                 url: '/main',
-                abstract: true,
                 templateUrl: 'app/main/main.html',
-                controller: 'MainCtrl'
+                controller: 'MainCtrl',
+                controllerAs: 'vm'
             });
 
         $urlRouterProvider.otherwise('/main');

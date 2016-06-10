@@ -11,56 +11,37 @@ var del = require('del');
 var sh = require('shelljs');
 
 var paths = {
-    sass: ['./scss/**/*.scss']
+    sass: ['./scss/**/*.scss'],
+    js: ['www/app/**/*.js', '!www/app/app.js', '!www/app/_Logger.js', '!www/app/js/scripts.min.js']
 };
 
 gulp.task('default', ['watch']);
 
-gulp.task('js-controller', function() {
-    return gulp.src('www/js/controllers/*.js')
+gulp.task('js', function() {
+    return gulp.src(paths.js)
         .pipe(sourcemaps.init())
-        .pipe(concat('controllers.min.js'))
+        .pipe(concat('scripts.min.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('www/js'));
-});
-
-gulp.task('js-directive', function() {
-    return gulp.src('www/js/directives/*.js')
-        .pipe(sourcemaps.init())
-        .pipe(concat('directives.min.js'))
-        .pipe(uglify())
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('www/js'));
-});
-
-gulp.task('js-service', function() {
-    return gulp.src('www/js/services/*.js')
-        .pipe(sourcemaps.init())
-        .pipe(concat('services.min.js'))
-        .pipe(uglify())
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('www/js'));
+        .pipe(gulp.dest('www/app/js'));
 });
 
 gulp.task('sass', function(done) {
-    gulp.src('./scss/styles.scss')
+    gulp.src('./scss/ionic.app.scss')
         .pipe(sass())
         .on('error', sass.logError)
-        .pipe(gulp.dest('./www/css/'))
+        .pipe(gulp.dest('./www/app/css/'))
         .pipe(minifyCss({
             keepSpecialComments: 0
         }))
         .pipe(rename({ extname: '.min.css' }))
-        .pipe(gulp.dest('./www/css/'))
+        .pipe(gulp.dest('./www/app/css/'))
         .on('end', done);
 });
 
 gulp.task('watch', function() {
     gulp.watch(paths.sass, ['sass']);
-    gulp.watch('www/js/controllers/*.js', ['js-controller']);
-    gulp.watch('www/js/directives/*.js', ['js-directive']);
-    gulp.watch('www/js/services/*.js', ['js-service']);
+    gulp.watch(paths.js, ['js']);
 });
 
 gulp.task('install', ['git-check'], function() {

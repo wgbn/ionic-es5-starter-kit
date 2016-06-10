@@ -4,25 +4,26 @@
     angular.module('app')
         .controller('LoginCtrl', LoginCtrl);
 
-    LoginCtrl.$inject = ['$scope', '$state', 'Storage'];
+    LoginCtrl.$inject = ['$state'];
 
-    function LoginCtrl($scope, $state, Storage) {
-        var fn = {}, data = {};
-        
-        $scope.fn = fn;
-        $scope.data = data;
+    function LoginCtrl($state) {
+        var vm = this;
 
-        data.credentials = {
+        // bindings
+        vm.credenciais = {
             login: '',
-            password: ''
+            senha: ''
         };
 
-        fn.login = function (credentials) {
-            if (credentials.login) {
-                Storage.setUser({login: credentials.login}).then(function () {
-                    $state.go('app.twitts');
-                });
-            }
-        };
+        // actions
+        vm.fazLogin = _fazLogin;
+
+        /////////////////////////////
+
+        function _fazLogin () {
+            // logica do login
+            console.info(vm.credenciais);
+            $state.go('main');
+        }
     }
 })();

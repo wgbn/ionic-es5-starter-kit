@@ -1,39 +1,35 @@
-# Ionic Starter
+# WGBN Ionic Starter
 
 [![Dependency Status](https://david-dm.org/loicknuchel/ionic-starter.svg)](https://david-dm.org/loicknuchel/ionic-starter)
 [![devDependency Status](https://david-dm.org/loicknuchel/ionic-starter/dev-status.svg)](https://david-dm.org/loicknuchel/ionic-starter#info=devDependencies)
 
-This project aims to let you start a new app as fast as possible.
+Este projeto tem como objetivo permitir que você inicie um novo app o mais rápido possível.
 
-Just clone it and you are ready to do ! Many boilerplate code is already written and most usefull libs are included. I'm trying to follow best practices with Angular & Ionic so it could be a good kick start :)
+Basta cloná-lo e você está pronto para começar o seu app com o básico! O código padrão já está escrito e as libs mais utilizadas estão incluídas. Tentei seguir ao máximo as melhores práticas com Angular & Ionic, estão este pode ser um bom começo para você.
 
-Feel free to open an issue for any question or suggestion you could have.
+Sinta-se livre para abrir uma issue para qualquer dúvida ou sugestão que você possa ter.
 
-This application (mostly) follows the [John Papa's style guide](https://github.com/johnpapa/angular-styleguide).
+Esta aplicação (principalmente) segue o [Guia de Estilo sugerido por John Papa](https://github.com/johnpapa/angular-styleguide/blob/master/a1/i18n/pt-BR.md).
 
-## Getting started
+## Começando
 
-- install nodejs, npm, gulp, bower, cordova, ionic & sass (if not already done)
-- `git clone git@github.com:loicknuchel/ionic-starter.git` : clone this repo
-- `cd ionic-starter` : go to folder
-- `bower install` : install app dependencies
-- `npm install` : install build dependencies
-- `ionic setup sass` : use sass
-- `ionic serve` : start the app on your browser
+- instale nodejs, npm, gulp, bower, cordova, ionic & sass (como global -g se ja nao os tiver instalado)
+- `git clone git@github.com:loicknuchel/ionic-starter.git`: clone este repositorio
+- `cd wgbn-ionic-starter`: entre na pasta
+- `bower install`: instale as dependencias do app
+- `npm install`: instale as dependencias de construçao
+- `ionic setup sass`: ative o sass
+- `ionic serve`: inicie o app em seu browser
 
-For the impatients, you can run all these commands in one time : `git clone git@github.com:loicknuchel/ionic-starter.git && cd ionic-starter && bower install && npm install && ionic setup sass && ionic serve`
+Para executar o aplicativo em seu dispositivo Android:
 
-To run the app on your android device :
+- `ionic platform add android`: adicione a plataforma android ao seu projeto
+- `ionic resources`: gere automaticamente as imagens de launcher e splash screen
+- `ionic run android`: e rode o aplicativo
 
-- `ionic platform add android` : add android platform to the project
-- `ionic resources` : generate icon & splash-screen for project platforms
-- `ionic run android` : run your app !
+## Personalização
 
-Once again, in one command : `ionic platform add android && ionic resources && ionic run android`
-
-## Personnalize
-
-As it's only a template project, you may want to change its name. For that, you just have to open :
+Como é apenas um projeto modelo, você pode querer mudar o seu nome. Para isso, vocẽ terá de editar:
 
 - `config.xml` (widget id, name, description & author)
 - `www/index.html` (title)
@@ -41,38 +37,20 @@ As it's only a template project, you may want to change its name. For that, you 
 - `package.json` (name & description)
 - `ionic.project` (name)
 
-## Used versions
-
-- Node v4.2.2 (`node -v`)
-- Cordova 5.4.0 (`cordova -version`)
-- Bower 1.7.0 (`bower -v`)
-- Angular 1.4.3 (see bower.json)
-- Ionic 1.2.0 (see bower.json)
-
 ## Infos
-
-### Browser development
-
-- Chrome cordova : https://chrome.google.com/webstore/detail/cordova-mocks/iigcccneenmnplhhfhaeahiofeeeifpn (https://github.com/pbernasconi/chrome-cordova)
-
-### Android debug
-
-- android remote debug : https://developer.chrome.com/devtools/docs/remote-debugging
-- activate developer mode on android
 
 ### Specific urls
 
-Use these custom urls to open other apps using inappbrowser (org.apache.cordova.inappbrowser)
+Use essas URLs personalizadas para abrir outros aplicativos usando inappbrowser (org.apache.cordova.inappbrowser)
 
-- "tel:0123456789" => call this number
-- "sms:0123456789?body=coucou" => send sms to this number
-- "geo:lat,lon" => open google map to this geoloc
-- "mailto:toto@example.com" => send an email
-- "market:???"
+- "tel:0123456789" => ligar para este número
+- "sms:0123456789?body=coucou" => enviar sms para este número
+- "geo:lat,lon" => abrir o mapa para estas coordenadas
+- "mailto:toto@example.com" => enviar um e-mail
 
-see http://stackoverflow.com/questions/26271313/tel-sms-and-mailto-no-longer-working-in-android-after-upgrading-to-cordo
+ver mais sobre http://stackoverflow.com/questions/26271313/tel-sms-and-mailto-no-longer-working-in-android-after-upgrading-to-cordo
 
-### Other links
+### Outros links
 
 - Push
     - https://github.com/hollyschinsky/PushNotificationSample
